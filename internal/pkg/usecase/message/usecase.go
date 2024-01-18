@@ -86,7 +86,7 @@ func (m *messageCase) GetMessagesFromChat(ctx context.Context, userID int, chat 
 			UserID2: int64(chat[1]),
 		},
 		Count:  int64(count),
-		LastID: int64(count),
+		LastID: int64(lastID),
 	})
 	if err != nil {
 		err = fmt.Errorf("get message by : %w", err)
@@ -193,9 +193,8 @@ func (m *messageCase) receiveFromSubClient(ctx context.Context, userID int, subC
 		evMsg.Message, err = m.GetMessage(ctx, userID, msgObjID.MessageID)
 		if err != nil {
 			m.log.Error(err.Error())
-		}
-
-		if evMsg.Type == "delete" {
+			evMsg.Err = err
+		} else if evMsg.Type == "delete" {
 			evMsg.Message.Content.String = ""
 		}
 

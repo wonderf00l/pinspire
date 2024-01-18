@@ -6,6 +6,7 @@ require (
 	cloud.google.com/go/vision/v2 v2.7.5
 	github.com/IBM/sarama v1.42.1
 	github.com/Masterminds/squirrel v1.5.4
+	github.com/TwiN/go-away v1.6.12
 	github.com/asaskevich/govalidator v0.0.0-20230301143203-a9d515a09cc2
 	github.com/go-chi/chi/v5 v5.0.10
 	github.com/golang/mock v1.6.0
@@ -98,7 +99,7 @@ require (
 	golang.org/x/oauth2 v0.13.0 // indirect
 	golang.org/x/sync v0.4.0 // indirect
 	golang.org/x/sys v0.13.0 // indirect
-	golang.org/x/text v0.13.0 // indirect
+	golang.org/x/text v0.14.0 // indirect
 	golang.org/x/tools v0.14.0 // indirect
 	google.golang.org/appengine v1.6.8 // indirect
 	google.golang.org/genproto v0.0.0-20231212172506-995d672761c0 // indirect
